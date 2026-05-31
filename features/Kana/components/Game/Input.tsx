@@ -93,7 +93,7 @@ const InputGame = ({ isHidden, isReverse = false }: InputGameProps) => {
     targetLength,
     recordCorrect: recordTargetLengthCorrect,
     recordWrong: recordTargetLengthWrong,
-  } = useAdaptiveTargetLength();
+  } = useAdaptiveTargetLength({ correctsPerLevel: 10 });
 
   const [inputValue, setInputValue] = useState('');
   const [bottomBarState, setBottomBarState] = useState<BottomBarState>('check');
